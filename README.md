@@ -1,17 +1,27 @@
-# Books API - ASP.NET Core
+# Books API | ASP.NET Core + MongoDB
 
 ![C#](https://img.shields.io/badge/C%23-239120?style=flat&logo=c-sharp&logoColor=white)
 ![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=flat&logo=dotnet&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
 
 <p align="justify">
-API desenvolvida em <strong>ASP.NET Core (C#)</strong> utilizando o padrão de <strong>Controllers</strong>, com integração ao <strong>MongoDB</strong> (NoSQL). Este projeto foi criado como
-atividade acadêmica com o objetivo de praticar a construção de uma <strong>API REST completa (CRUD)</strong>, permitindo operações de criação, leitura, atualização e exclusão de dados,
-além de consolidar conhecimentos em desenvolvimento backend e integração com banco de dados não relacional.
+API REST para gerenciamento de livros, desenvolvida em C# com ASP.NET Core e integrada ao MongoDB. O projeto implementa operações completas de CRUD (Create, Read, Update e Delete), seguindo o padrão de Controllers (MVC) para organização da aplicação.
+
+Foi construída com foco na prática de desenvolvimento backend, abordando conceitos como estruturação de APIs, manipulação de dados em banco NoSQL e boas práticas de organização de código.
 </p>
 
+---
 
-## Funcionalidades
+## 🛠️ Tecnologias
+
+- C#
+- ASP.NET Core
+- MongoDB
+- Swagger
+
+---
+
+## 🚀 Funcionalidades
 
 - Cadastro de livros com os seguintes campos:
   - Nome
@@ -24,34 +34,32 @@ além de consolidar conhecimentos em desenvolvimento backend e integração com 
   - Listar todos os livros
   - Buscar livro por ID
   - Atualizar dados
-  - Deletar livros
+  - Remover livros
 
 ---
 
-## Endpoints
+## 🔗 Endpoints
 
-<div align="center">
-
-<table>
-<tr>
-<th>Método</th>
-<th>Rota</th>
-<th>Descrição</th>
-</tr>
-
-<tr><td>GET</td><td>/api/books</td><td>Lista todos os livros</td></tr>
-<tr><td>GET</td><td>/api/books/{id}</td><td>Busca um livro pelo ID</td></tr>
-<tr><td>POST</td><td>/api/books</td><td>Cria um novo livro</td></tr>
-<tr><td>PUT</td><td>/api/books/{id}</td><td>Atualiza todos os dados</td></tr>
-<tr><td>DELETE</td><td>/api/books/{id}</td><td>Remove um livro</td></tr>
-
-</table>
-
-</div>
+| Método | Rota              | Descrição                     |
+|--------|-------------------|--------------------------------|
+| GET    | /api/books        | Lista todos os livros         |
+| GET    | /api/books/{id}   | Busca um livro por ID         |
+| POST   | /api/books        | Cria um novo livro            |
+| PUT    | /api/books/{id}   | Atualiza os dados do livro    |
+| DELETE | /api/books/{id}   | Remove um livro               |
 
 ---
 
-## Exemplo de Livro (JSON)
+## 📦 Estrutura do Projeto
+
+- Controllers
+- Models
+- Services
+- Configurations
+
+---
+
+## 📄 Exemplo de Livro (JSON)
 
 ```json
 {
@@ -68,10 +76,20 @@ além de consolidar conhecimentos em desenvolvimento backend e integração com 
    ```bash
    git clone <URL_DO_REPOSITORIO>
 2. Abra a solução no Visual Studio
-3. Configure a conexão com o MongoDB no arquivo de configuração (caso necessário)
+3. Configure a string de conexão com o MongoDB no arquivo appsettings.json (caso necessário)
 4. Execute o projeto
-5. Utilize ferramentas como Swagger para testar os endpoints
+5. Acesse o Swagger em:
+   ```bash
+   https://localhost:<porta>/swagger
 
 ## Testes
+Os endpoints foram testados utilizando o Swagger, permitindo a validação de todas as operações de CRUD de forma prática e interativa.
 
-Todos os endpoints foram testados utilizando o <strong>Swagger</strong>, garantindo o funcionamento correto das operações de CRUD.
+## Aprendizado
+Durante o desenvolvimento deste projeto, foram aplicados conceitos como:
+
+- Criação de APIs REST com ASP.NET Core
+- Integração com banco de dados NoSQL (MongoDB)
+- Estruturação utilizando padrão MVC (Controllers)
+- Implementação de operações CRUD
+- Organização e boas práticas no backend
